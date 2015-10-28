@@ -1,6 +1,6 @@
-`define WIDTH 16
-`define BUF_WIDTH 5    
-`define BUF_SIZE ( 1<<`BUF_WIDTH )
+`define WIDTH 16        //lebar data
+`define BUF_WIDTH 7     //counter hingga 87 dibutuhkan 7 bit
+`define BUF_SIZE 87     //banyak nya stage
 
 module fifo(clk, rst, buf_in, buf_out, wr_en, rd_en);
 
