@@ -2,3 +2,5 @@
 2. Test bench fifo.v
 3. Quantitation_1bit.v
 4. Demux2to1.v
+5. Controller_Stage1.v
+6. tb_Controller_Stage1.v
