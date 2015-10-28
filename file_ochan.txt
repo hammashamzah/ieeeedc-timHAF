@@ -1,3 +1,4 @@
-1. Fifo
-2. Test bench fifo
+1. Fifo.v
+2. Test bench fifo.v
 3. Quantitation_1bit.v
+4. Demux2to1.v
