@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="LUT_toplevel">
+		<CBX_INST_ENTRY INSTANCE_NAME="|LUT_toplevel|LUT:LUT_x1|altsyncram:WideOr6_rtl_0" CBX_FILE_NAME="altsyncram_5i01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LUT_toplevel|LUT:LUT_x2|altsyncram:WideOr6_rtl_0" CBX_FILE_NAME="altsyncram_4i01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LUT_toplevel|LUT:LUT_y1|altsyncram:WideOr6_rtl_0" CBX_FILE_NAME="altsyncram_3i01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LUT_toplevel|LUT:LUT_y2|altsyncram:WideOr6_rtl_0" CBX_FILE_NAME="altsyncram_2i01.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

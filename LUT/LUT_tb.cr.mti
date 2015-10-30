@@ -1,0 +1,22 @@
+D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_toplevel.v {1 {vlog -work work D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_toplevel.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module LUT_toplevel
+
+Top level modules:
+	LUT_toplevel
+
+} {} {}} D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT.v {1 {vlog -work work D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module LUT
+
+Top level modules:
+	LUT
+
+} {} {}} D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_tb.v {1 {vlog -work work D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module LUT_tb
+
+Top level modules:
+	LUT_tb
+
+} {} {}}

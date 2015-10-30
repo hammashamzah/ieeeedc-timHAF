@@ -1,0 +1,1057 @@
+TimeQuest Timing Analyzer report for LUT_toplevel
+Fri Oct 30 20:29:55 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; LUT_toplevel                                                      ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                           ;
++------------+-----------------+------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
++------------+-----------------+------------+-------------------------------------------------------+
+; 719.94 MHz ; 216.08 MHz      ; clock      ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -0.389 ; -4.799        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.787 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.814 ; -156.831              ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                                                                 ;
++--------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node             ; To Node                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.389 ; LUT:LUT_x2|code_in[0] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.426      ;
+; -0.389 ; LUT:LUT_y2|code_in[0] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.426      ;
+; -0.386 ; LUT:LUT_x1|code_in[0] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.423      ;
+; -0.378 ; LUT:LUT_y1|code_in[6] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.083      ; 1.421      ;
+; -0.377 ; LUT:LUT_x2|code_in[7] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.083      ; 1.420      ;
+; -0.375 ; LUT:LUT_x2|code_in[4] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.083      ; 1.418      ;
+; -0.104 ; LUT:LUT_x1|code_in[6] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_x1|code_in[5] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_x1|code_in[1] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_y2|code_in[7] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_y2|code_in[3] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_y2|code_in[2] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_y1|code_in[7] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_y1|code_in[2] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.104 ; LUT:LUT_y1|code_in[1] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.141      ;
+; -0.096 ; LUT:LUT_x1|code_in[3] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.133      ;
+; -0.096 ; LUT:LUT_y2|code_in[5] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.133      ;
+; -0.095 ; LUT:LUT_x1|code_in[7] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.132      ;
+; -0.095 ; LUT:LUT_x2|code_in[6] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.132      ;
+; -0.095 ; LUT:LUT_x2|code_in[3] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.132      ;
+; -0.095 ; LUT:LUT_x2|code_in[1] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.132      ;
+; -0.095 ; LUT:LUT_y2|code_in[1] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.132      ;
+; -0.095 ; LUT:LUT_y1|code_in[4] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.132      ;
+; -0.094 ; LUT:LUT_x1|code_in[4] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.131      ;
+; -0.094 ; LUT:LUT_x1|code_in[2] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.131      ;
+; -0.094 ; LUT:LUT_x2|code_in[2] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.131      ;
+; -0.094 ; LUT:LUT_y2|code_in[6] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.131      ;
+; -0.094 ; LUT:LUT_y2|code_in[4] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.131      ;
+; -0.094 ; LUT:LUT_y1|code_in[3] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.131      ;
+; -0.083 ; LUT:LUT_x2|code_in[5] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.120      ;
+; -0.083 ; LUT:LUT_y1|code_in[5] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.077      ; 1.120      ;
+; -0.077 ; LUT:LUT_y1|code_in[0] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.083      ; 1.120      ;
++--------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                                                 ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.787 ; LUT:LUT_y1|code_in[0] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.083      ; 1.120      ;
+; 0.793 ; LUT:LUT_x2|code_in[5] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.120      ;
+; 0.793 ; LUT:LUT_y1|code_in[5] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.120      ;
+; 0.804 ; LUT:LUT_x1|code_in[4] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.131      ;
+; 0.804 ; LUT:LUT_x1|code_in[2] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.131      ;
+; 0.804 ; LUT:LUT_x2|code_in[2] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.131      ;
+; 0.804 ; LUT:LUT_y2|code_in[6] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.131      ;
+; 0.804 ; LUT:LUT_y2|code_in[4] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.131      ;
+; 0.804 ; LUT:LUT_y1|code_in[3] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.131      ;
+; 0.805 ; LUT:LUT_x1|code_in[7] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.132      ;
+; 0.805 ; LUT:LUT_x2|code_in[6] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.132      ;
+; 0.805 ; LUT:LUT_x2|code_in[3] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.132      ;
+; 0.805 ; LUT:LUT_x2|code_in[1] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.132      ;
+; 0.805 ; LUT:LUT_y2|code_in[1] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.132      ;
+; 0.805 ; LUT:LUT_y1|code_in[4] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.132      ;
+; 0.806 ; LUT:LUT_x1|code_in[3] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.133      ;
+; 0.806 ; LUT:LUT_y2|code_in[5] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.133      ;
+; 0.814 ; LUT:LUT_x1|code_in[6] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_x1|code_in[5] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_x1|code_in[1] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_y2|code_in[7] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_y2|code_in[3] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_y2|code_in[2] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_y1|code_in[7] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_y1|code_in[2] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 0.814 ; LUT:LUT_y1|code_in[1] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.141      ;
+; 1.085 ; LUT:LUT_x2|code_in[4] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.083      ; 1.418      ;
+; 1.087 ; LUT:LUT_x2|code_in[7] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.083      ; 1.420      ;
+; 1.088 ; LUT:LUT_y1|code_in[6] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.083      ; 1.421      ;
+; 1.096 ; LUT:LUT_x1|code_in[0] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.423      ;
+; 1.099 ; LUT:LUT_x2|code_in[0] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.426      ;
+; 1.099 ; LUT:LUT_y2|code_in[0] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.077      ; 1.426      ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------+
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clock ; Rise       ; clock                                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[0]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[0]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[1]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[1]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[2]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[2]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[3]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[3]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[4]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[4]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[5]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[5]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[6]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[6]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[7]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[7]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[0]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[0]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[1]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[1]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[2]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[2]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[3]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[3]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[4]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[4]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[5]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[5]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[6]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[6]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[7]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[7]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|code_in[0]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|code_in[0]                                                                              ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|code_in[1]                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; code_x1[*]  ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+;  code_x1[0] ; clock      ; 3.808 ; 3.808 ; Rise       ; clock           ;
+;  code_x1[1] ; clock      ; 3.834 ; 3.834 ; Rise       ; clock           ;
+;  code_x1[2] ; clock      ; 3.600 ; 3.600 ; Rise       ; clock           ;
+;  code_x1[3] ; clock      ; 3.614 ; 3.614 ; Rise       ; clock           ;
+;  code_x1[4] ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+;  code_x1[5] ; clock      ; 3.843 ; 3.843 ; Rise       ; clock           ;
+;  code_x1[6] ; clock      ; 3.821 ; 3.821 ; Rise       ; clock           ;
+;  code_x1[7] ; clock      ; 3.605 ; 3.605 ; Rise       ; clock           ;
+; code_x2[*]  ; clock      ; 3.940 ; 3.940 ; Rise       ; clock           ;
+;  code_x2[0] ; clock      ; 3.804 ; 3.804 ; Rise       ; clock           ;
+;  code_x2[1] ; clock      ; 3.940 ; 3.940 ; Rise       ; clock           ;
+;  code_x2[2] ; clock      ; 3.609 ; 3.609 ; Rise       ; clock           ;
+;  code_x2[3] ; clock      ; 3.799 ; 3.799 ; Rise       ; clock           ;
+;  code_x2[4] ; clock      ; 3.799 ; 3.799 ; Rise       ; clock           ;
+;  code_x2[5] ; clock      ; 3.607 ; 3.607 ; Rise       ; clock           ;
+;  code_x2[6] ; clock      ; 3.614 ; 3.614 ; Rise       ; clock           ;
+;  code_x2[7] ; clock      ; 3.816 ; 3.816 ; Rise       ; clock           ;
+; code_y1[*]  ; clock      ; 3.905 ; 3.905 ; Rise       ; clock           ;
+;  code_y1[0] ; clock      ; 3.857 ; 3.857 ; Rise       ; clock           ;
+;  code_y1[1] ; clock      ; 3.887 ; 3.887 ; Rise       ; clock           ;
+;  code_y1[2] ; clock      ; 3.633 ; 3.633 ; Rise       ; clock           ;
+;  code_y1[3] ; clock      ; 3.630 ; 3.630 ; Rise       ; clock           ;
+;  code_y1[4] ; clock      ; 3.905 ; 3.905 ; Rise       ; clock           ;
+;  code_y1[5] ; clock      ; 3.864 ; 3.864 ; Rise       ; clock           ;
+;  code_y1[6] ; clock      ; 3.830 ; 3.830 ; Rise       ; clock           ;
+;  code_y1[7] ; clock      ; 0.090 ; 0.090 ; Rise       ; clock           ;
+; code_y2[*]  ; clock      ; 4.005 ; 4.005 ; Rise       ; clock           ;
+;  code_y2[0] ; clock      ; 3.622 ; 3.622 ; Rise       ; clock           ;
+;  code_y2[1] ; clock      ; 3.610 ; 3.610 ; Rise       ; clock           ;
+;  code_y2[2] ; clock      ; 3.968 ; 3.968 ; Rise       ; clock           ;
+;  code_y2[3] ; clock      ; 3.618 ; 3.618 ; Rise       ; clock           ;
+;  code_y2[4] ; clock      ; 3.996 ; 3.996 ; Rise       ; clock           ;
+;  code_y2[5] ; clock      ; 3.627 ; 3.627 ; Rise       ; clock           ;
+;  code_y2[6] ; clock      ; 3.812 ; 3.812 ; Rise       ; clock           ;
+;  code_y2[7] ; clock      ; 4.005 ; 4.005 ; Rise       ; clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; code_x1[*]  ; clock      ; -3.352 ; -3.352 ; Rise       ; clock           ;
+;  code_x1[0] ; clock      ; -3.560 ; -3.560 ; Rise       ; clock           ;
+;  code_x1[1] ; clock      ; -3.586 ; -3.586 ; Rise       ; clock           ;
+;  code_x1[2] ; clock      ; -3.352 ; -3.352 ; Rise       ; clock           ;
+;  code_x1[3] ; clock      ; -3.366 ; -3.366 ; Rise       ; clock           ;
+;  code_x1[4] ; clock      ; -3.629 ; -3.629 ; Rise       ; clock           ;
+;  code_x1[5] ; clock      ; -3.595 ; -3.595 ; Rise       ; clock           ;
+;  code_x1[6] ; clock      ; -3.573 ; -3.573 ; Rise       ; clock           ;
+;  code_x1[7] ; clock      ; -3.357 ; -3.357 ; Rise       ; clock           ;
+; code_x2[*]  ; clock      ; -3.359 ; -3.359 ; Rise       ; clock           ;
+;  code_x2[0] ; clock      ; -3.556 ; -3.556 ; Rise       ; clock           ;
+;  code_x2[1] ; clock      ; -3.692 ; -3.692 ; Rise       ; clock           ;
+;  code_x2[2] ; clock      ; -3.361 ; -3.361 ; Rise       ; clock           ;
+;  code_x2[3] ; clock      ; -3.551 ; -3.551 ; Rise       ; clock           ;
+;  code_x2[4] ; clock      ; -3.551 ; -3.551 ; Rise       ; clock           ;
+;  code_x2[5] ; clock      ; -3.359 ; -3.359 ; Rise       ; clock           ;
+;  code_x2[6] ; clock      ; -3.366 ; -3.366 ; Rise       ; clock           ;
+;  code_x2[7] ; clock      ; -3.568 ; -3.568 ; Rise       ; clock           ;
+; code_y1[*]  ; clock      ; 0.158  ; 0.158  ; Rise       ; clock           ;
+;  code_y1[0] ; clock      ; -3.609 ; -3.609 ; Rise       ; clock           ;
+;  code_y1[1] ; clock      ; -3.639 ; -3.639 ; Rise       ; clock           ;
+;  code_y1[2] ; clock      ; -3.385 ; -3.385 ; Rise       ; clock           ;
+;  code_y1[3] ; clock      ; -3.382 ; -3.382 ; Rise       ; clock           ;
+;  code_y1[4] ; clock      ; -3.657 ; -3.657 ; Rise       ; clock           ;
+;  code_y1[5] ; clock      ; -3.616 ; -3.616 ; Rise       ; clock           ;
+;  code_y1[6] ; clock      ; -3.582 ; -3.582 ; Rise       ; clock           ;
+;  code_y1[7] ; clock      ; 0.158  ; 0.158  ; Rise       ; clock           ;
+; code_y2[*]  ; clock      ; -3.362 ; -3.362 ; Rise       ; clock           ;
+;  code_y2[0] ; clock      ; -3.374 ; -3.374 ; Rise       ; clock           ;
+;  code_y2[1] ; clock      ; -3.362 ; -3.362 ; Rise       ; clock           ;
+;  code_y2[2] ; clock      ; -3.720 ; -3.720 ; Rise       ; clock           ;
+;  code_y2[3] ; clock      ; -3.370 ; -3.370 ; Rise       ; clock           ;
+;  code_y2[4] ; clock      ; -3.748 ; -3.748 ; Rise       ; clock           ;
+;  code_y2[5] ; clock      ; -3.379 ; -3.379 ; Rise       ; clock           ;
+;  code_y2[6] ; clock      ; -3.564 ; -3.564 ; Rise       ; clock           ;
+;  code_y2[7] ; clock      ; -3.757 ; -3.757 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; theta[*]  ; clock      ; 19.182 ; 19.182 ; Rise       ; clock           ;
+;  theta[0] ; clock      ; 17.493 ; 17.493 ; Rise       ; clock           ;
+;  theta[1] ; clock      ; 19.084 ; 19.084 ; Rise       ; clock           ;
+;  theta[2] ; clock      ; 19.182 ; 19.182 ; Rise       ; clock           ;
+;  theta[3] ; clock      ; 17.777 ; 17.777 ; Rise       ; clock           ;
+;  theta[4] ; clock      ; 18.362 ; 18.362 ; Rise       ; clock           ;
+;  theta[5] ; clock      ; 18.656 ; 18.656 ; Rise       ; clock           ;
+;  theta[6] ; clock      ; 18.003 ; 18.003 ; Rise       ; clock           ;
+;  theta[7] ; clock      ; 17.139 ; 17.139 ; Rise       ; clock           ;
+;  theta[8] ; clock      ; 15.788 ; 15.788 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; theta[*]  ; clock      ; 11.799 ; 11.799 ; Rise       ; clock           ;
+;  theta[0] ; clock      ; 11.881 ; 11.881 ; Rise       ; clock           ;
+;  theta[1] ; clock      ; 11.839 ; 11.839 ; Rise       ; clock           ;
+;  theta[2] ; clock      ; 11.942 ; 11.942 ; Rise       ; clock           ;
+;  theta[3] ; clock      ; 12.111 ; 12.111 ; Rise       ; clock           ;
+;  theta[4] ; clock      ; 11.799 ; 11.799 ; Rise       ; clock           ;
+;  theta[5] ; clock      ; 12.159 ; 12.159 ; Rise       ; clock           ;
+;  theta[6] ; clock      ; 12.336 ; 12.336 ; Rise       ; clock           ;
+;  theta[7] ; clock      ; 12.907 ; 12.907 ; Rise       ; clock           ;
+;  theta[8] ; clock      ; 12.967 ; 12.967 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.463 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.271 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.423 ; -124.452              ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                                                ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.463 ; LUT:LUT_x2|code_in[0] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.601      ;
+; 0.463 ; LUT:LUT_y2|code_in[0] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.601      ;
+; 0.467 ; LUT:LUT_x1|code_in[0] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.597      ;
+; 0.474 ; LUT:LUT_x2|code_in[7] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.071      ; 0.596      ;
+; 0.474 ; LUT:LUT_y1|code_in[6] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.071      ; 0.596      ;
+; 0.475 ; LUT:LUT_x2|code_in[4] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.071      ; 0.595      ;
+; 0.575 ; LUT:LUT_x1|code_in[6] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_x1|code_in[5] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_x1|code_in[1] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_y2|code_in[7] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_y2|code_in[3] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_y2|code_in[2] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_y1|code_in[7] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_y1|code_in[2] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.575 ; LUT:LUT_y1|code_in[1] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.489      ;
+; 0.579 ; LUT:LUT_x1|code_in[3] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.485      ;
+; 0.579 ; LUT:LUT_y2|code_in[5] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.485      ;
+; 0.580 ; LUT:LUT_x1|code_in[7] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_x1|code_in[4] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_x1|code_in[2] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_x2|code_in[6] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_x2|code_in[3] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_x2|code_in[2] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_x2|code_in[1] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_y2|code_in[6] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_y2|code_in[4] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_y2|code_in[1] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_y1|code_in[4] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.580 ; LUT:LUT_y1|code_in[3] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.484      ;
+; 0.585 ; LUT:LUT_x2|code_in[5] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.479      ;
+; 0.585 ; LUT:LUT_y1|code_in[5] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.065      ; 0.479      ;
+; 0.590 ; LUT:LUT_y1|code_in[0] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.071      ; 0.480      ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                                                 ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.271 ; LUT:LUT_y1|code_in[0] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.071      ; 0.480      ;
+; 0.276 ; LUT:LUT_x2|code_in[5] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.479      ;
+; 0.276 ; LUT:LUT_y1|code_in[5] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.479      ;
+; 0.281 ; LUT:LUT_x1|code_in[7] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_x1|code_in[4] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_x1|code_in[2] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_x2|code_in[6] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_x2|code_in[3] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_x2|code_in[2] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_x2|code_in[1] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_y2|code_in[6] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_y2|code_in[4] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_y2|code_in[1] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_y1|code_in[4] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.281 ; LUT:LUT_y1|code_in[3] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.484      ;
+; 0.282 ; LUT:LUT_x1|code_in[3] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.485      ;
+; 0.282 ; LUT:LUT_y2|code_in[5] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.485      ;
+; 0.286 ; LUT:LUT_x1|code_in[6] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_x1|code_in[5] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_x1|code_in[1] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_y2|code_in[7] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_y2|code_in[3] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_y2|code_in[2] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_y1|code_in[7] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_y1|code_in[2] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.286 ; LUT:LUT_y1|code_in[1] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.489      ;
+; 0.386 ; LUT:LUT_x2|code_in[4] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.071      ; 0.595      ;
+; 0.387 ; LUT:LUT_x2|code_in[7] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.071      ; 0.596      ;
+; 0.387 ; LUT:LUT_y1|code_in[6] ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.071      ; 0.596      ;
+; 0.394 ; LUT:LUT_x1|code_in[0] ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.597      ;
+; 0.398 ; LUT:LUT_x2|code_in[0] ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.601      ;
+; 0.398 ; LUT:LUT_y2|code_in[0] ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.065      ; 0.601      ;
++-------+-----------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x1|code_in[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x1|code_in[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_x2|code_in[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_x2|code_in[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|code_in[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; LUT:LUT_y1|code_in[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; LUT:LUT_y1|code_in[1]                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; code_x1[*]  ; clock      ; 1.768  ; 1.768  ; Rise       ; clock           ;
+;  code_x1[0] ; clock      ; 1.727  ; 1.727  ; Rise       ; clock           ;
+;  code_x1[1] ; clock      ; 1.743  ; 1.743  ; Rise       ; clock           ;
+;  code_x1[2] ; clock      ; 1.620  ; 1.620  ; Rise       ; clock           ;
+;  code_x1[3] ; clock      ; 1.628  ; 1.628  ; Rise       ; clock           ;
+;  code_x1[4] ; clock      ; 1.768  ; 1.768  ; Rise       ; clock           ;
+;  code_x1[5] ; clock      ; 1.743  ; 1.743  ; Rise       ; clock           ;
+;  code_x1[6] ; clock      ; 1.728  ; 1.728  ; Rise       ; clock           ;
+;  code_x1[7] ; clock      ; 1.623  ; 1.623  ; Rise       ; clock           ;
+; code_x2[*]  ; clock      ; 1.832  ; 1.832  ; Rise       ; clock           ;
+;  code_x2[0] ; clock      ; 1.700  ; 1.700  ; Rise       ; clock           ;
+;  code_x2[1] ; clock      ; 1.832  ; 1.832  ; Rise       ; clock           ;
+;  code_x2[2] ; clock      ; 1.626  ; 1.626  ; Rise       ; clock           ;
+;  code_x2[3] ; clock      ; 1.697  ; 1.697  ; Rise       ; clock           ;
+;  code_x2[4] ; clock      ; 1.697  ; 1.697  ; Rise       ; clock           ;
+;  code_x2[5] ; clock      ; 1.625  ; 1.625  ; Rise       ; clock           ;
+;  code_x2[6] ; clock      ; 1.633  ; 1.633  ; Rise       ; clock           ;
+;  code_x2[7] ; clock      ; 1.707  ; 1.707  ; Rise       ; clock           ;
+; code_y1[*]  ; clock      ; 1.799  ; 1.799  ; Rise       ; clock           ;
+;  code_y1[0] ; clock      ; 1.746  ; 1.746  ; Rise       ; clock           ;
+;  code_y1[1] ; clock      ; 1.784  ; 1.784  ; Rise       ; clock           ;
+;  code_y1[2] ; clock      ; 1.651  ; 1.651  ; Rise       ; clock           ;
+;  code_y1[3] ; clock      ; 1.649  ; 1.649  ; Rise       ; clock           ;
+;  code_y1[4] ; clock      ; 1.799  ; 1.799  ; Rise       ; clock           ;
+;  code_y1[5] ; clock      ; 1.772  ; 1.772  ; Rise       ; clock           ;
+;  code_y1[6] ; clock      ; 1.725  ; 1.725  ; Rise       ; clock           ;
+;  code_y1[7] ; clock      ; -0.466 ; -0.466 ; Rise       ; clock           ;
+; code_y2[*]  ; clock      ; 1.855  ; 1.855  ; Rise       ; clock           ;
+;  code_y2[0] ; clock      ; 1.637  ; 1.637  ; Rise       ; clock           ;
+;  code_y2[1] ; clock      ; 1.630  ; 1.630  ; Rise       ; clock           ;
+;  code_y2[2] ; clock      ; 1.825  ; 1.825  ; Rise       ; clock           ;
+;  code_y2[3] ; clock      ; 1.637  ; 1.637  ; Rise       ; clock           ;
+;  code_y2[4] ; clock      ; 1.843  ; 1.843  ; Rise       ; clock           ;
+;  code_y2[5] ; clock      ; 1.644  ; 1.644  ; Rise       ; clock           ;
+;  code_y2[6] ; clock      ; 1.720  ; 1.720  ; Rise       ; clock           ;
+;  code_y2[7] ; clock      ; 1.855  ; 1.855  ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; code_x1[*]  ; clock      ; -1.500 ; -1.500 ; Rise       ; clock           ;
+;  code_x1[0] ; clock      ; -1.607 ; -1.607 ; Rise       ; clock           ;
+;  code_x1[1] ; clock      ; -1.623 ; -1.623 ; Rise       ; clock           ;
+;  code_x1[2] ; clock      ; -1.500 ; -1.500 ; Rise       ; clock           ;
+;  code_x1[3] ; clock      ; -1.508 ; -1.508 ; Rise       ; clock           ;
+;  code_x1[4] ; clock      ; -1.648 ; -1.648 ; Rise       ; clock           ;
+;  code_x1[5] ; clock      ; -1.623 ; -1.623 ; Rise       ; clock           ;
+;  code_x1[6] ; clock      ; -1.608 ; -1.608 ; Rise       ; clock           ;
+;  code_x1[7] ; clock      ; -1.503 ; -1.503 ; Rise       ; clock           ;
+; code_x2[*]  ; clock      ; -1.505 ; -1.505 ; Rise       ; clock           ;
+;  code_x2[0] ; clock      ; -1.580 ; -1.580 ; Rise       ; clock           ;
+;  code_x2[1] ; clock      ; -1.712 ; -1.712 ; Rise       ; clock           ;
+;  code_x2[2] ; clock      ; -1.506 ; -1.506 ; Rise       ; clock           ;
+;  code_x2[3] ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
+;  code_x2[4] ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
+;  code_x2[5] ; clock      ; -1.505 ; -1.505 ; Rise       ; clock           ;
+;  code_x2[6] ; clock      ; -1.513 ; -1.513 ; Rise       ; clock           ;
+;  code_x2[7] ; clock      ; -1.587 ; -1.587 ; Rise       ; clock           ;
+; code_y1[*]  ; clock      ; 0.586  ; 0.586  ; Rise       ; clock           ;
+;  code_y1[0] ; clock      ; -1.626 ; -1.626 ; Rise       ; clock           ;
+;  code_y1[1] ; clock      ; -1.664 ; -1.664 ; Rise       ; clock           ;
+;  code_y1[2] ; clock      ; -1.531 ; -1.531 ; Rise       ; clock           ;
+;  code_y1[3] ; clock      ; -1.529 ; -1.529 ; Rise       ; clock           ;
+;  code_y1[4] ; clock      ; -1.679 ; -1.679 ; Rise       ; clock           ;
+;  code_y1[5] ; clock      ; -1.652 ; -1.652 ; Rise       ; clock           ;
+;  code_y1[6] ; clock      ; -1.605 ; -1.605 ; Rise       ; clock           ;
+;  code_y1[7] ; clock      ; 0.586  ; 0.586  ; Rise       ; clock           ;
+; code_y2[*]  ; clock      ; -1.510 ; -1.510 ; Rise       ; clock           ;
+;  code_y2[0] ; clock      ; -1.517 ; -1.517 ; Rise       ; clock           ;
+;  code_y2[1] ; clock      ; -1.510 ; -1.510 ; Rise       ; clock           ;
+;  code_y2[2] ; clock      ; -1.705 ; -1.705 ; Rise       ; clock           ;
+;  code_y2[3] ; clock      ; -1.517 ; -1.517 ; Rise       ; clock           ;
+;  code_y2[4] ; clock      ; -1.723 ; -1.723 ; Rise       ; clock           ;
+;  code_y2[5] ; clock      ; -1.524 ; -1.524 ; Rise       ; clock           ;
+;  code_y2[6] ; clock      ; -1.600 ; -1.600 ; Rise       ; clock           ;
+;  code_y2[7] ; clock      ; -1.735 ; -1.735 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; theta[*]  ; clock      ; 8.973 ; 8.973 ; Rise       ; clock           ;
+;  theta[0] ; clock      ; 8.242 ; 8.242 ; Rise       ; clock           ;
+;  theta[1] ; clock      ; 8.821 ; 8.821 ; Rise       ; clock           ;
+;  theta[2] ; clock      ; 8.973 ; 8.973 ; Rise       ; clock           ;
+;  theta[3] ; clock      ; 8.389 ; 8.389 ; Rise       ; clock           ;
+;  theta[4] ; clock      ; 8.569 ; 8.569 ; Rise       ; clock           ;
+;  theta[5] ; clock      ; 8.705 ; 8.705 ; Rise       ; clock           ;
+;  theta[6] ; clock      ; 8.535 ; 8.535 ; Rise       ; clock           ;
+;  theta[7] ; clock      ; 8.174 ; 8.174 ; Rise       ; clock           ;
+;  theta[8] ; clock      ; 7.636 ; 7.636 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; theta[*]  ; clock      ; 6.236 ; 6.236 ; Rise       ; clock           ;
+;  theta[0] ; clock      ; 6.236 ; 6.236 ; Rise       ; clock           ;
+;  theta[1] ; clock      ; 6.239 ; 6.239 ; Rise       ; clock           ;
+;  theta[2] ; clock      ; 6.353 ; 6.353 ; Rise       ; clock           ;
+;  theta[3] ; clock      ; 6.344 ; 6.344 ; Rise       ; clock           ;
+;  theta[4] ; clock      ; 6.248 ; 6.248 ; Rise       ; clock           ;
+;  theta[5] ; clock      ; 6.364 ; 6.364 ; Rise       ; clock           ;
+;  theta[6] ; clock      ; 6.504 ; 6.504 ; Rise       ; clock           ;
+;  theta[7] ; clock      ; 6.656 ; 6.656 ; Rise       ; clock           ;
+;  theta[8] ; clock      ; 6.631 ; 6.631 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.389 ; 0.271 ; N/A      ; N/A     ; -1.814              ;
+;  clock           ; -0.389 ; 0.271 ; N/A      ; N/A     ; -1.814              ;
+; Design-wide TNS  ; -4.799 ; 0.0   ; 0.0      ; 0.0     ; -156.831            ;
+;  clock           ; -4.799 ; 0.000 ; N/A      ; N/A     ; -156.831            ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; code_x1[*]  ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+;  code_x1[0] ; clock      ; 3.808 ; 3.808 ; Rise       ; clock           ;
+;  code_x1[1] ; clock      ; 3.834 ; 3.834 ; Rise       ; clock           ;
+;  code_x1[2] ; clock      ; 3.600 ; 3.600 ; Rise       ; clock           ;
+;  code_x1[3] ; clock      ; 3.614 ; 3.614 ; Rise       ; clock           ;
+;  code_x1[4] ; clock      ; 3.877 ; 3.877 ; Rise       ; clock           ;
+;  code_x1[5] ; clock      ; 3.843 ; 3.843 ; Rise       ; clock           ;
+;  code_x1[6] ; clock      ; 3.821 ; 3.821 ; Rise       ; clock           ;
+;  code_x1[7] ; clock      ; 3.605 ; 3.605 ; Rise       ; clock           ;
+; code_x2[*]  ; clock      ; 3.940 ; 3.940 ; Rise       ; clock           ;
+;  code_x2[0] ; clock      ; 3.804 ; 3.804 ; Rise       ; clock           ;
+;  code_x2[1] ; clock      ; 3.940 ; 3.940 ; Rise       ; clock           ;
+;  code_x2[2] ; clock      ; 3.609 ; 3.609 ; Rise       ; clock           ;
+;  code_x2[3] ; clock      ; 3.799 ; 3.799 ; Rise       ; clock           ;
+;  code_x2[4] ; clock      ; 3.799 ; 3.799 ; Rise       ; clock           ;
+;  code_x2[5] ; clock      ; 3.607 ; 3.607 ; Rise       ; clock           ;
+;  code_x2[6] ; clock      ; 3.614 ; 3.614 ; Rise       ; clock           ;
+;  code_x2[7] ; clock      ; 3.816 ; 3.816 ; Rise       ; clock           ;
+; code_y1[*]  ; clock      ; 3.905 ; 3.905 ; Rise       ; clock           ;
+;  code_y1[0] ; clock      ; 3.857 ; 3.857 ; Rise       ; clock           ;
+;  code_y1[1] ; clock      ; 3.887 ; 3.887 ; Rise       ; clock           ;
+;  code_y1[2] ; clock      ; 3.633 ; 3.633 ; Rise       ; clock           ;
+;  code_y1[3] ; clock      ; 3.630 ; 3.630 ; Rise       ; clock           ;
+;  code_y1[4] ; clock      ; 3.905 ; 3.905 ; Rise       ; clock           ;
+;  code_y1[5] ; clock      ; 3.864 ; 3.864 ; Rise       ; clock           ;
+;  code_y1[6] ; clock      ; 3.830 ; 3.830 ; Rise       ; clock           ;
+;  code_y1[7] ; clock      ; 0.090 ; 0.090 ; Rise       ; clock           ;
+; code_y2[*]  ; clock      ; 4.005 ; 4.005 ; Rise       ; clock           ;
+;  code_y2[0] ; clock      ; 3.622 ; 3.622 ; Rise       ; clock           ;
+;  code_y2[1] ; clock      ; 3.610 ; 3.610 ; Rise       ; clock           ;
+;  code_y2[2] ; clock      ; 3.968 ; 3.968 ; Rise       ; clock           ;
+;  code_y2[3] ; clock      ; 3.618 ; 3.618 ; Rise       ; clock           ;
+;  code_y2[4] ; clock      ; 3.996 ; 3.996 ; Rise       ; clock           ;
+;  code_y2[5] ; clock      ; 3.627 ; 3.627 ; Rise       ; clock           ;
+;  code_y2[6] ; clock      ; 3.812 ; 3.812 ; Rise       ; clock           ;
+;  code_y2[7] ; clock      ; 4.005 ; 4.005 ; Rise       ; clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; code_x1[*]  ; clock      ; -1.500 ; -1.500 ; Rise       ; clock           ;
+;  code_x1[0] ; clock      ; -1.607 ; -1.607 ; Rise       ; clock           ;
+;  code_x1[1] ; clock      ; -1.623 ; -1.623 ; Rise       ; clock           ;
+;  code_x1[2] ; clock      ; -1.500 ; -1.500 ; Rise       ; clock           ;
+;  code_x1[3] ; clock      ; -1.508 ; -1.508 ; Rise       ; clock           ;
+;  code_x1[4] ; clock      ; -1.648 ; -1.648 ; Rise       ; clock           ;
+;  code_x1[5] ; clock      ; -1.623 ; -1.623 ; Rise       ; clock           ;
+;  code_x1[6] ; clock      ; -1.608 ; -1.608 ; Rise       ; clock           ;
+;  code_x1[7] ; clock      ; -1.503 ; -1.503 ; Rise       ; clock           ;
+; code_x2[*]  ; clock      ; -1.505 ; -1.505 ; Rise       ; clock           ;
+;  code_x2[0] ; clock      ; -1.580 ; -1.580 ; Rise       ; clock           ;
+;  code_x2[1] ; clock      ; -1.712 ; -1.712 ; Rise       ; clock           ;
+;  code_x2[2] ; clock      ; -1.506 ; -1.506 ; Rise       ; clock           ;
+;  code_x2[3] ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
+;  code_x2[4] ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
+;  code_x2[5] ; clock      ; -1.505 ; -1.505 ; Rise       ; clock           ;
+;  code_x2[6] ; clock      ; -1.513 ; -1.513 ; Rise       ; clock           ;
+;  code_x2[7] ; clock      ; -1.587 ; -1.587 ; Rise       ; clock           ;
+; code_y1[*]  ; clock      ; 0.586  ; 0.586  ; Rise       ; clock           ;
+;  code_y1[0] ; clock      ; -1.626 ; -1.626 ; Rise       ; clock           ;
+;  code_y1[1] ; clock      ; -1.664 ; -1.664 ; Rise       ; clock           ;
+;  code_y1[2] ; clock      ; -1.531 ; -1.531 ; Rise       ; clock           ;
+;  code_y1[3] ; clock      ; -1.529 ; -1.529 ; Rise       ; clock           ;
+;  code_y1[4] ; clock      ; -1.679 ; -1.679 ; Rise       ; clock           ;
+;  code_y1[5] ; clock      ; -1.652 ; -1.652 ; Rise       ; clock           ;
+;  code_y1[6] ; clock      ; -1.605 ; -1.605 ; Rise       ; clock           ;
+;  code_y1[7] ; clock      ; 0.586  ; 0.586  ; Rise       ; clock           ;
+; code_y2[*]  ; clock      ; -1.510 ; -1.510 ; Rise       ; clock           ;
+;  code_y2[0] ; clock      ; -1.517 ; -1.517 ; Rise       ; clock           ;
+;  code_y2[1] ; clock      ; -1.510 ; -1.510 ; Rise       ; clock           ;
+;  code_y2[2] ; clock      ; -1.705 ; -1.705 ; Rise       ; clock           ;
+;  code_y2[3] ; clock      ; -1.517 ; -1.517 ; Rise       ; clock           ;
+;  code_y2[4] ; clock      ; -1.723 ; -1.723 ; Rise       ; clock           ;
+;  code_y2[5] ; clock      ; -1.524 ; -1.524 ; Rise       ; clock           ;
+;  code_y2[6] ; clock      ; -1.600 ; -1.600 ; Rise       ; clock           ;
+;  code_y2[7] ; clock      ; -1.735 ; -1.735 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; theta[*]  ; clock      ; 19.182 ; 19.182 ; Rise       ; clock           ;
+;  theta[0] ; clock      ; 17.493 ; 17.493 ; Rise       ; clock           ;
+;  theta[1] ; clock      ; 19.084 ; 19.084 ; Rise       ; clock           ;
+;  theta[2] ; clock      ; 19.182 ; 19.182 ; Rise       ; clock           ;
+;  theta[3] ; clock      ; 17.777 ; 17.777 ; Rise       ; clock           ;
+;  theta[4] ; clock      ; 18.362 ; 18.362 ; Rise       ; clock           ;
+;  theta[5] ; clock      ; 18.656 ; 18.656 ; Rise       ; clock           ;
+;  theta[6] ; clock      ; 18.003 ; 18.003 ; Rise       ; clock           ;
+;  theta[7] ; clock      ; 17.139 ; 17.139 ; Rise       ; clock           ;
+;  theta[8] ; clock      ; 15.788 ; 15.788 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; theta[*]  ; clock      ; 6.236 ; 6.236 ; Rise       ; clock           ;
+;  theta[0] ; clock      ; 6.236 ; 6.236 ; Rise       ; clock           ;
+;  theta[1] ; clock      ; 6.239 ; 6.239 ; Rise       ; clock           ;
+;  theta[2] ; clock      ; 6.353 ; 6.353 ; Rise       ; clock           ;
+;  theta[3] ; clock      ; 6.344 ; 6.344 ; Rise       ; clock           ;
+;  theta[4] ; clock      ; 6.248 ; 6.248 ; Rise       ; clock           ;
+;  theta[5] ; clock      ; 6.364 ; 6.364 ; Rise       ; clock           ;
+;  theta[6] ; clock      ; 6.504 ; 6.504 ; Rise       ; clock           ;
+;  theta[7] ; clock      ; 6.656 ; 6.656 ; Rise       ; clock           ;
+;  theta[8] ; clock      ; 6.631 ; 6.631 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 32       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 32       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 32    ; 32   ;
+; Unconstrained Input Port Paths  ; 32    ; 32   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 288   ; 288  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Oct 30 20:29:54 2015
+Info: Command: quartus_sta LUT_toplevel -c LUT_toplevel
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'LUT_toplevel.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.389
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.389        -4.799 clock 
+Info (332146): Worst-case hold slack is 0.787
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.787         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.814
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.814      -156.831 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.463
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.463         0.000 clock 
+Info (332146): Worst-case hold slack is 0.271
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.271         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423      -124.452 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 387 megabytes
+    Info: Processing ended: Fri Oct 30 20:29:55 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

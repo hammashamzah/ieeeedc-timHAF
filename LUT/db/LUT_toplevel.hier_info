@@ -1,0 +1,153 @@
+|LUT_toplevel
+clock => clock.IN4
+code_x1[0] => code_x1[0].IN1
+code_x1[1] => code_x1[1].IN1
+code_x1[2] => code_x1[2].IN1
+code_x1[3] => code_x1[3].IN1
+code_x1[4] => code_x1[4].IN1
+code_x1[5] => code_x1[5].IN1
+code_x1[6] => code_x1[6].IN1
+code_x1[7] => code_x1[7].IN1
+code_x2[0] => code_x2[0].IN1
+code_x2[1] => code_x2[1].IN1
+code_x2[2] => code_x2[2].IN1
+code_x2[3] => code_x2[3].IN1
+code_x2[4] => code_x2[4].IN1
+code_x2[5] => code_x2[5].IN1
+code_x2[6] => code_x2[6].IN1
+code_x2[7] => code_x2[7].IN1
+code_y1[0] => code_y1[0].IN1
+code_y1[1] => code_y1[1].IN1
+code_y1[2] => code_y1[2].IN1
+code_y1[3] => code_y1[3].IN1
+code_y1[4] => code_y1[4].IN1
+code_y1[5] => code_y1[5].IN1
+code_y1[6] => code_y1[6].IN1
+code_y1[7] => code_y1[7].IN1
+code_y2[0] => code_y2[0].IN1
+code_y2[1] => code_y2[1].IN1
+code_y2[2] => code_y2[2].IN1
+code_y2[3] => code_y2[3].IN1
+code_y2[4] => code_y2[4].IN1
+code_y2[5] => code_y2[5].IN1
+code_y2[6] => code_y2[6].IN1
+code_y2[7] => code_y2[7].IN1
+theta[0] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[1] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[2] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[3] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[4] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[5] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[6] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[7] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+theta[8] <= theta.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LUT_toplevel|LUT:LUT_x1
+clock => code_in[0].CLK
+clock => code_in[1].CLK
+clock => code_in[2].CLK
+clock => code_in[3].CLK
+clock => code_in[4].CLK
+clock => code_in[5].CLK
+clock => code_in[6].CLK
+clock => code_in[7].CLK
+code[0] => code_in[0].DATAIN
+code[1] => code_in[1].DATAIN
+code[2] => code_in[2].DATAIN
+code[3] => code_in[3].DATAIN
+code[4] => code_in[4].DATAIN
+code[5] => code_in[5].DATAIN
+code[6] => code_in[6].DATAIN
+code[7] => code_in[7].DATAIN
+theta[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+theta[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+theta[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+theta[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+theta[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+theta[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+theta[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+theta[7] <= <GND>
+
+
+|LUT_toplevel|LUT:LUT_x2
+clock => code_in[0].CLK
+clock => code_in[1].CLK
+clock => code_in[2].CLK
+clock => code_in[3].CLK
+clock => code_in[4].CLK
+clock => code_in[5].CLK
+clock => code_in[6].CLK
+clock => code_in[7].CLK
+code[0] => code_in[0].DATAIN
+code[1] => code_in[1].DATAIN
+code[2] => code_in[2].DATAIN
+code[3] => code_in[3].DATAIN
+code[4] => code_in[4].DATAIN
+code[5] => code_in[5].DATAIN
+code[6] => code_in[6].DATAIN
+code[7] => code_in[7].DATAIN
+theta[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+theta[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+theta[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+theta[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+theta[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+theta[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+theta[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+theta[7] <= <GND>
+
+
+|LUT_toplevel|LUT:LUT_y1
+clock => code_in[0].CLK
+clock => code_in[1].CLK
+clock => code_in[2].CLK
+clock => code_in[3].CLK
+clock => code_in[4].CLK
+clock => code_in[5].CLK
+clock => code_in[6].CLK
+clock => code_in[7].CLK
+code[0] => code_in[0].DATAIN
+code[1] => code_in[1].DATAIN
+code[2] => code_in[2].DATAIN
+code[3] => code_in[3].DATAIN
+code[4] => code_in[4].DATAIN
+code[5] => code_in[5].DATAIN
+code[6] => code_in[6].DATAIN
+code[7] => code_in[7].DATAIN
+theta[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+theta[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+theta[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+theta[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+theta[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+theta[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+theta[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+theta[7] <= <GND>
+
+
+|LUT_toplevel|LUT:LUT_y2
+clock => code_in[0].CLK
+clock => code_in[1].CLK
+clock => code_in[2].CLK
+clock => code_in[3].CLK
+clock => code_in[4].CLK
+clock => code_in[5].CLK
+clock => code_in[6].CLK
+clock => code_in[7].CLK
+code[0] => code_in[0].DATAIN
+code[1] => code_in[1].DATAIN
+code[2] => code_in[2].DATAIN
+code[3] => code_in[3].DATAIN
+code[4] => code_in[4].DATAIN
+code[5] => code_in[5].DATAIN
+code[6] => code_in[6].DATAIN
+code[7] => code_in[7].DATAIN
+theta[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+theta[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+theta[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+theta[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+theta[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+theta[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+theta[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+theta[7] <= <GND>
+
+

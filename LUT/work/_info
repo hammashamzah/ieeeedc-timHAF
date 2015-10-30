@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vLUT
+Z1 !s100 B8ISaic=IZ<VbZoOT80KY1
+Z2 IKZ:2HAXJL7ZT:b5?JhoCh1
+Z3 VPXZUGX4hD03nh2;CI@ldR0
+Z4 dD:\Documents\GitHub\ieeeedc-timHAF\LUT
+Z5 w1446204607
+Z6 8D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT.v
+Z7 FD:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT.v|
+Z10 o-work work -O0
+Z11 n@l@u@t
+Z12 !s108 1446215252.744000
+Z13 !s107 D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vLUT_tb
+Z14 !s100 2a?gm]V<6BJJL2iiNJBK32
+Z15 I^<03<`h9i11a4IUfdhMP21
+Z16 VP@zPSo92S]G0RFMLVZDTi3
+R4
+Z17 w1446205774
+Z18 8D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_tb.v
+Z19 FD:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_tb.v
+L0 2
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_tb.v|
+R10
+Z21 n@l@u@t_tb
+!i10b 1
+!s85 0
+Z22 !s108 1446215252.900000
+Z23 !s107 D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_tb.v|
+!s101 -O0
+vLUT_toplevel
+!i10b 1
+!s100 E3AIlCCY<a5LHV8:K36Dc1
+I0d0Nh@ho5@[0gBASa;AhJ3
+Z24 V=`<;>9OHS]I=cC94=A]1J1
+R4
+Z25 w1446195479
+8D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_toplevel.v
+FD:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_toplevel.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1446215253.103000
+!s107 D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_toplevel.v|
+!s90 -reportprogress|300|-work|work|D:/Documents/GitHub/ieeeedc-timHAF/LUT/LUT_toplevel.v|
+!s101 -O0
+R10
+Z26 n@l@u@t_toplevel
