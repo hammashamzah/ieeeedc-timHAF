@@ -1,0 +1,8 @@
+{E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v} {1 {vlog -work work -stats=none {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module shift_register
+
+Top level modules:
+	shift_register
+
+} {} {}}

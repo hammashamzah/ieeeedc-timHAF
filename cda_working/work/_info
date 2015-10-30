@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF
+vccd
+!s110 1446043673
+!i10b 1
+!s100 8Z:H]W1R>[TG3UeWO:n`S0
+ISKc[`HjB=BnRN5j=lFao[2
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+Z1 dE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/cda_working
+w1446043669
+8E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/ccd.v
+FE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/ccd.v
+L0 1
+Z2 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1446043672.696000
+!s107 E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/ccd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/ccd.v|
+!i113 1
+Z3 o-work work
+vcda_top_level
+!s110 1446049464
+!i10b 1
+!s100 llLeo`g`:;b7Fz_Gi>R@]3
+IOS^FBa24LE0:Wfdn3855^3
+R0
+R1
+w1446049450
+8E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v
+FE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1446049464.131000
+!s107 E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v|
+!i113 1
+R3
+vencoder
+!s110 1446045563
+!i10b 1
+!s100 SC:UaCo]L6FPmQJj2^H5n3
+IR[zBe^n:a5Yj@BndAoXc32
+R0
+R1
+w1446045344
+8E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/encoder.v
+FE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/encoder.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1446045562.872000
+!s107 E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/encoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/encoder.v|
+!i113 1
+R3
+vshift_register
+Z4 !s110 1446043675
+!i10b 1
+!s100 3SAnKNboPDm:M3_iY`TV=0
+I2B>BR_PTJ2LIcEJ1P2R=D2
+R0
+R1
+w1446039478
+8E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v
+FE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1446043675.287000
+!s107 E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v|
+!i113 1
+R3
+vup_down_counter
+R4
+!i10b 1
+!s100 ?6eeP=Ul1hK7SmD_j_d5L3
+IdD[=JC_W1K91cn@;<DPRR2
+R0
+R1
+w1446040426
+8E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/up_down_counter.v
+FE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/up_down_counter.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1446043675.538000
+!s107 E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/up_down_counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/up_down_counter.v|
+!i113 1
+R3

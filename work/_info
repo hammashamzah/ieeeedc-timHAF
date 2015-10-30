@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Courses/Electrical Engineering on Campus/Semester 7/EL4138 Perancangan Sistem VLSI/codes/8bitradix4multiplier
+vshift_register
+!s110 1445669762
+!i10b 1
+!s100 oQRI6]=@l4@eC?Bk2J<__0
+IY3MAmQZjhQ6YBUWPKZHlI3
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+Z1 dE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF
+w1445669546
+8E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v
+FE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v
+L0 1
+Z2 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1445669762.428000
+!s107 E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v|
+!i113 1
+Z3 o-work work
+vtestbench_shift_register
+!s110 1445670636
+!i10b 1
+!s100 W5K^cA1e9e8X@SU9na=YV1
+Imhb1;>WBdb^QaD[LFk6RO2
+R0
+R1
+w1445670633
+8E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/testbench_shift_register.v
+FE:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/testbench_shift_register.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1445670636.843000
+!s107 E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/testbench_shift_register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/testbench_shift_register.v|
+!i113 1
+R3

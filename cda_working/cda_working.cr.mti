@@ -1,0 +1,33 @@
+{E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/up_down_counter.v} {1 {vlog -work work -stats=none {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/up_down_counter.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module up_down_counter
+
+Top level modules:
+	up_down_counter
+
+} {} {}} {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v} {0 {vlog -work work -stats=none {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module cda_top_level
+** Error: E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v(22): 'x1' already declared in this scope.
+** Error: E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v(24): near "encoder": syntax error, unexpected IDENTIFIER, expecting ';' or ','
+** Error: E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v(32): 'i' is an invalid type in Generate loop. Must be a genvar.
+** Error: E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v(34): (vlog-2730) Undefined variable: 'msb_cc'.
+
+** Error: E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v(35): near "=": syntax error, unexpected '='
+** Error: E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/cda_top_level.v(43): near "assign": syntax error, unexpected assign, expecting IDENTIFIER or TYPE_IDENTIFIER
+
+} {4.0 8.0 9.0 11.0} {}} {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/ccd.v} {1 {vlog -work work -stats=none {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/ccd.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module ccd
+
+Top level modules:
+	ccd
+
+} {} {}} {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v} {1 {vlog -work work -stats=none {E:/Projects/IEEE-EDC VLSI 2015/Codes on Github/ieeeedc-timHAF/CDA Block/shift_register.v}
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module shift_register
+
+Top level modules:
+	shift_register
+
+} {} {}}
