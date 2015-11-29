@@ -1,0 +1,57 @@
+/home/hammas/code/lsi/ieeeedc-timHAF/Combined/LUT.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/LUT.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module LUT
+
+Top level modules:
+	LUT
+
+} {} {}} /home/hammas/code/lsi/ieeeedc-timHAF/Combined/cda_top_level.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/cda_top_level.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module cda_top_level
+
+Top level modules:
+	cda_top_level
+
+} {} {}} /home/hammas/code/lsi/ieeeedc-timHAF/Combined/top_level.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/top_level.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module top_level
+
+Top level modules:
+	top_level
+
+} {} {}} /home/hammas/code/lsi/ieeeedc-timHAF/Combined/shift_register.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/shift_register.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module shift_register
+
+Top level modules:
+	shift_register
+
+} {} {}} /home/hammas/code/lsi/ieeeedc-timHAF/Combined/ccd.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/ccd.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module ccd
+
+Top level modules:
+	ccd
+
+} {} {}} /home/hammas/code/lsi/ieeeedc-timHAF/Combined/up_down_counter.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/up_down_counter.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module up_down_counter
+
+Top level modules:
+	up_down_counter
+
+} {} {}} /home/hammas/code/lsi/ieeeedc-timHAF/Combined/LUT_toplevel.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/LUT_toplevel.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module LUT_toplevel
+
+Top level modules:
+	LUT_toplevel
+
+} {} {}} /home/hammas/code/lsi/ieeeedc-timHAF/Combined/encoder.v {1 {vlog -work work -stats=none /home/hammas/code/lsi/ieeeedc-timHAF/Combined/encoder.v
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module encoder
+
+Top level modules:
+	encoder
+
+} {} {}}

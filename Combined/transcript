@@ -1,0 +1,164 @@
+# Loading project system test
+# Compile of ccd.v was successful.
+# Compile of cda_top_level.v was successful.
+# Compile of encoder.v was successful.
+# Compile of LUT.v was successful.
+# Compile of LUT_toplevel.v was successful.
+# Compile of shift_register.v was successful.
+# Compile of system_testbench.v failed with 2 errors.
+# Compile of top_level.v was successful.
+# Compile of up_down_counter.v was successful.
+# 9 compiles, 1 failed with 2 errors.
+# Compile of system_testbench.v was successful.
+# Load canceled
+vsim work.system_testbench
+# vsim work.system_testbench 
+# Start time: 05:32:43 on Nov 30,2015
+# Loading work.system_testbench
+# Loading work.top_level
+# Loading work.cda_top_level
+# Loading work.shift_register
+# Loading work.encoder
+# Loading work.LUT_toplevel
+# Loading work.LUT
+# Loading work.ccd
+# Loading work.up_down_counter
+# ** Warning: Design size of 8001933 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# WARNING: No extended dataflow license exists
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/system_testbench/clk \
+sim:/system_testbench/en \
+sim:/system_testbench/rst \
+sim:/system_testbench/x1 \
+sim:/system_testbench/x2 \
+sim:/system_testbench/y1 \
+sim:/system_testbench/y2 \
+sim:/system_testbench/angle
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run -all
+# Break key hit
+# Simulation stop requested.
+quit -sim
+# End time: 05:52:28 on Nov 30,2015, Elapsed time: 0:19:45
+# Errors: 0, Warnings: 2
+# Compile of system_testbench.v was successful.
+vsim work.system_testbench
+# vsim work.system_testbench 
+# Start time: 05:53:28 on Nov 30,2015
+# Loading work.system_testbench
+# Loading work.top_level
+# Loading work.cda_top_level
+# Loading work.shift_register
+# Loading work.encoder
+# Loading work.LUT_toplevel
+# Loading work.LUT
+# Loading work.ccd
+# Loading work.up_down_counter
+# ** Warning: Design size of 2401933 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# WARNING: No extended dataflow license exists
+run
+restart
+add wave -position insertpoint  \
+sim:/system_testbench/clk \
+sim:/system_testbench/en \
+sim:/system_testbench/rst \
+sim:/system_testbench/x1 \
+sim:/system_testbench/x2 \
+sim:/system_testbench/y1 \
+sim:/system_testbench/y2 \
+sim:/system_testbench/angle
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of system_testbench.v was successful.
+restart
+# Loading work.system_testbench
+# ** Warning: Design size of 2401933 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+run
