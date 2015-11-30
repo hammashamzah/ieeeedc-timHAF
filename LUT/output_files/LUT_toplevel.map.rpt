@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LUT_toplevel
-Fri Oct 30 20:29:41 2015
+Sat Nov 14 18:54:49 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,10 +18,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. General Register Statistics
  11. Registers Packed Into Inferred Megafunctions
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated
- 14. Source assignments for LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated
- 15. Source assignments for LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated
- 16. Source assignments for LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated
+ 13. Source assignments for LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_km01:auto_generated
+ 14. Source assignments for LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_lm01:auto_generated
+ 15. Source assignments for LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_mm01:auto_generated
+ 16. Source assignments for LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_nm01:auto_generated
  17. Parameter Settings for User Entity Instance: LUT:LUT_x1
  18. Parameter Settings for User Entity Instance: LUT:LUT_x2
  19. Parameter Settings for User Entity Instance: LUT:LUT_y1
@@ -58,13 +58,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 30 20:29:41 2015           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 14 18:54:49 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; LUT_toplevel                                    ;
 ; Top-level Entity Name              ; LUT_toplevel                                    ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 151                                             ;
-;     Total combinational functions  ; 119                                             ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 152                                             ;
+;     Total combinational functions  ; 120                                             ;
 ;     Dedicated logic registers      ; 32                                              ;
 ; Total registers                    ; 32                                              ;
 ; Total pins                         ; 42                                              ;
@@ -80,9 +80,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; LUT_toplevel       ; LUT_toplevel       ;
-; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -121,12 +121,14 @@ applicable agreement for further details.
 ; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
 ; Auto ROM Replacement                                                       ; On                 ; On                 ;
 ; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
 ; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
 ; Strict RAM Replacement                                                     ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
 ; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
 ; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
 ; Auto Resource Sharing                                                      ; Off                ; Off                ;
 ; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
@@ -134,7 +136,7 @@ applicable agreement for further details.
 ; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
 ; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
 ; Report Parameter Settings                                                  ; On                 ; On                 ;
 ; Report Source Assignments                                                  ; On                 ; On                 ;
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
@@ -187,46 +189,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                         ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                 ;         ;
 ; altram.inc                         ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                 ;         ;
 ; altdpram.inc                       ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc               ;         ;
-; db/altsyncram_2i01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_2i01.tdf                ;         ;
+; db/altsyncram_km01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_km01.tdf                ;         ;
 ; LUT_toplevel.LUT_toplevel0.rtl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/LUT_toplevel.LUT_toplevel0.rtl.mif ;         ;
-; db/altsyncram_3i01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_3i01.tdf                ;         ;
+; db/altsyncram_lm01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_lm01.tdf                ;         ;
 ; LUT_toplevel.LUT_toplevel1.rtl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/LUT_toplevel.LUT_toplevel1.rtl.mif ;         ;
-; db/altsyncram_4i01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_4i01.tdf                ;         ;
+; db/altsyncram_mm01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_mm01.tdf                ;         ;
 ; LUT_toplevel.LUT_toplevel2.rtl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/LUT_toplevel.LUT_toplevel2.rtl.mif ;         ;
-; db/altsyncram_5i01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_5i01.tdf                ;         ;
+; db/altsyncram_nm01.tdf             ; yes             ; Auto-Generated Megafunction                           ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/altsyncram_nm01.tdf                ;         ;
 ; LUT_toplevel.LUT_toplevel3.rtl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Documents/GitHub/ieeeedc-timHAF/LUT/db/LUT_toplevel.LUT_toplevel3.rtl.mif ;         ;
 +------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 151   ;
-;                                             ;       ;
-; Total combinational functions               ; 119   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 58    ;
-;     -- 3 input functions                    ; 4     ;
-;     -- <=2 input functions                  ; 57    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 70    ;
-;     -- arithmetic mode                      ; 49    ;
-;                                             ;       ;
-; Total registers                             ; 32    ;
-;     -- Dedicated logic registers            ; 32    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 42    ;
-; Total memory bits                           ; 7168  ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 60    ;
-; Total fan-out                               ; 665   ;
-; Average fan-out                             ; 3.01  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 152         ;
+;                                             ;             ;
+; Total combinational functions               ; 120         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 58          ;
+;     -- 3 input functions                    ; 4           ;
+;     -- <=2 input functions                  ; 58          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 71          ;
+;     -- arithmetic mode                      ; 49          ;
+;                                             ;             ;
+; Total registers                             ; 32          ;
+;     -- Dedicated logic registers            ; 32          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 42          ;
+; Total memory bits                           ; 7168        ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 60          ;
+; Total fan-out                               ; 709         ;
+; Average fan-out                             ; 2.69        ;
++---------------------------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -234,19 +236,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+--------------+
-; |LUT_toplevel                             ; 119 (119)         ; 32 (0)       ; 7168        ; 0            ; 0       ; 0         ; 42   ; 0            ; |LUT_toplevel                                                                    ; work         ;
+; |LUT_toplevel                             ; 120 (120)         ; 32 (0)       ; 7168        ; 0            ; 0       ; 0         ; 42   ; 0            ; |LUT_toplevel                                                                    ; work         ;
 ;    |LUT:LUT_x1|                           ; 0 (0)             ; 8 (8)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x1                                                         ; work         ;
 ;       |altsyncram:WideOr6_rtl_0|          ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x1|altsyncram:WideOr6_rtl_0                                ; work         ;
-;          |altsyncram_5i01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated ; work         ;
+;          |altsyncram_nm01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_nm01:auto_generated ; work         ;
 ;    |LUT:LUT_x2|                           ; 0 (0)             ; 8 (8)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x2                                                         ; work         ;
 ;       |altsyncram:WideOr6_rtl_0|          ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x2|altsyncram:WideOr6_rtl_0                                ; work         ;
-;          |altsyncram_4i01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated ; work         ;
+;          |altsyncram_mm01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_mm01:auto_generated ; work         ;
 ;    |LUT:LUT_y1|                           ; 0 (0)             ; 8 (8)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y1                                                         ; work         ;
 ;       |altsyncram:WideOr6_rtl_0|          ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y1|altsyncram:WideOr6_rtl_0                                ; work         ;
-;          |altsyncram_3i01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated ; work         ;
+;          |altsyncram_lm01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_lm01:auto_generated ; work         ;
 ;    |LUT:LUT_y2|                           ; 0 (0)             ; 8 (8)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y2                                                         ; work         ;
 ;       |altsyncram:WideOr6_rtl_0|          ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y2|altsyncram:WideOr6_rtl_0                                ; work         ;
-;          |altsyncram_2i01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated ; work         ;
+;          |altsyncram_km01:auto_generated| ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |LUT_toplevel|LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_km01:auto_generated ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -256,10 +258,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------------+
 ; Name                                                                          ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                ;
 +-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------------+
-; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel3.rtl.mif ;
-; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel2.rtl.mif ;
-; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel1.rtl.mif ;
-; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel0.rtl.mif ;
+; LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_nm01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel3.rtl.mif ;
+; LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_mm01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel2.rtl.mif ;
+; LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_lm01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel1.rtl.mif ;
+; LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_km01:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792 ; LUT_toplevel.LUT_toplevel0.rtl.mif ;
 +-------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------------+
 
 
@@ -313,7 +315,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_2i01:auto_generated ;
+; Source assignments for LUT:LUT_y2|altsyncram:WideOr6_rtl_0|altsyncram_km01:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -322,7 +324,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_3i01:auto_generated ;
+; Source assignments for LUT:LUT_y1|altsyncram:WideOr6_rtl_0|altsyncram_lm01:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -331,7 +333,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_4i01:auto_generated ;
+; Source assignments for LUT:LUT_x2|altsyncram:WideOr6_rtl_0|altsyncram_mm01:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -340,7 +342,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------+
-; Source assignments for LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_5i01:auto_generated ;
+; Source assignments for LUT:LUT_x1|altsyncram:WideOr6_rtl_0|altsyncram_nm01:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------+
 ; Assignment                      ; Value              ; From ; To                          ;
 +---------------------------------+--------------------+------+-----------------------------+
@@ -443,8 +445,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                              ; Untyped        ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone II                         ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_2i01                    ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                       ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_km01                    ; Untyped        ;
 +------------------------------------+------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -504,8 +506,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                              ; Untyped        ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone II                         ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_3i01                    ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                       ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_lm01                    ; Untyped        ;
 +------------------------------------+------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -565,8 +567,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                              ; Untyped        ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone II                         ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_4i01                    ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                       ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_mm01                    ; Untyped        ;
 +------------------------------------+------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -626,8 +628,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                              ; Untyped        ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                              ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                  ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone II                         ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_5i01                    ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                       ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_nm01                    ; Untyped        ;
 +------------------------------------+------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -690,7 +692,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -700,7 +702,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 30 20:29:35 2015
+    Info: Processing started: Sat Nov 14 18:54:43 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LUT_toplevel -c LUT_toplevel
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file lut_toplevel.v
@@ -751,8 +753,8 @@ Info (12133): Instantiated megafunction "LUT:LUT_y2|altsyncram:WideOr6_rtl_0" wi
     Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
     Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
     Info (12134): Parameter "INIT_FILE" = "LUT_toplevel.LUT_toplevel0.rtl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2i01.tdf
-    Info (12023): Found entity 1: altsyncram_2i01
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_km01.tdf
+    Info (12023): Found entity 1: altsyncram_km01
 Info (12130): Elaborated megafunction instantiation "LUT:LUT_y1|altsyncram:WideOr6_rtl_0"
 Info (12133): Instantiated megafunction "LUT:LUT_y1|altsyncram:WideOr6_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -762,8 +764,8 @@ Info (12133): Instantiated megafunction "LUT:LUT_y1|altsyncram:WideOr6_rtl_0" wi
     Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
     Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
     Info (12134): Parameter "INIT_FILE" = "LUT_toplevel.LUT_toplevel1.rtl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3i01.tdf
-    Info (12023): Found entity 1: altsyncram_3i01
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_lm01.tdf
+    Info (12023): Found entity 1: altsyncram_lm01
 Info (12130): Elaborated megafunction instantiation "LUT:LUT_x2|altsyncram:WideOr6_rtl_0"
 Info (12133): Instantiated megafunction "LUT:LUT_x2|altsyncram:WideOr6_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -773,8 +775,8 @@ Info (12133): Instantiated megafunction "LUT:LUT_x2|altsyncram:WideOr6_rtl_0" wi
     Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
     Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
     Info (12134): Parameter "INIT_FILE" = "LUT_toplevel.LUT_toplevel2.rtl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4i01.tdf
-    Info (12023): Found entity 1: altsyncram_4i01
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mm01.tdf
+    Info (12023): Found entity 1: altsyncram_mm01
 Info (12130): Elaborated megafunction instantiation "LUT:LUT_x1|altsyncram:WideOr6_rtl_0"
 Info (12133): Instantiated megafunction "LUT:LUT_x1|altsyncram:WideOr6_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -784,18 +786,19 @@ Info (12133): Instantiated megafunction "LUT:LUT_x1|altsyncram:WideOr6_rtl_0" wi
     Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
     Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
     Info (12134): Parameter "INIT_FILE" = "LUT_toplevel.LUT_toplevel3.rtl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5i01.tdf
-    Info (12023): Found entity 1: altsyncram_5i01
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nm01.tdf
+    Info (12023): Found entity 1: altsyncram_nm01
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 221 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 222 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 33 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 151 logic cells
+    Info (21061): Implemented 152 logic cells
     Info (21064): Implemented 28 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 466 megabytes
-    Info: Processing ended: Fri Oct 30 20:29:41 2015
+    Info: Peak virtual memory: 472 megabytes
+    Info: Processing ended: Sat Nov 14 18:54:49 2015
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:02
 
