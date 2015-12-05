@@ -11,7 +11,7 @@ int main(int argc, char const *argv[]){
 	int random;
 	int theta;
 	int initial_offset1, initial_offset2, initial_offset3, initial_offset4;
-	
+	int *value_temp;
 	theta = atoi(argv[1]);
 
 	if(argc != 2){
@@ -61,34 +61,19 @@ int main(int argc, char const *argv[]){
 	fprintf(fp, "clk = 1'b1%c\n", 59);
 	fprintf(fp, "rst = 1'b1%c\n", 59);
 	fprintf(fp, "en = 1'b1%c\n", 59); 
+
+	fprintf(fp, "x1 = 1'b%d%c\n", 0, 59);
+	fprintf(fp, "x2 = 1'b%d%c\n", 0, 59);
+	fprintf(fp, "y1 = 1'b%d%c\n", 0, 59);
+	fprintf(fp, "y2 = 1'b%d%c\n", 0, 59);
 	fprintf(fp, "#(clk_periode*2) rst = 1'b0%c\n", 59);
-
-	for (i = 0; i < initial_offset1; i++)
-	{
-		fprintf(fp, "#(clk_periode*%d) x1 = %d%c\n", i, 0, 59);
-	}
-
-	for (i = 0; i < initial_offset2; i++)
-	{
-		fprintf(fp, "#(clk_periode*%d) x2 = %d%c\n", i, 0, 59);
-	}
-
-	for (i = 0; i < initial_offset3; i++)
-	{
-		fprintf(fp, "#(clk_periode*%d) y1 = %d%c\n", i, 0, 59);
-	}
-
-	for (i = 0; i < initial_offset4; i++)
-	{
-		fprintf(fp, "#(clk_periode*%d) y2 = %d%c\n", i, 0, 59);
-	}
 
 	for(i = 0; i <300000; i++){
 		random = rand() % 2;
-		fprintf(fp, "#(clk_periode*%d) x1 = %d%c\n", i+initial_offset1, random, 59);
-		fprintf(fp, "#(clk_periode*%d) x2 = %d%c\n", i+initial_offset2, random, 59);
-		fprintf(fp, "#(clk_periode*%d) y1 = %d%c\n", i+initial_offset3, random, 59);
-		fprintf(fp, "#(clk_periode*%d) y2 = %d%c\n", i+initial_offset4, random, 59);
+		fprintf(fp, "#(clk_periode*%d) x1 = 1'b%d%c\n", i+initial_offset1, random, 59);
+		fprintf(fp, "#(clk_periode*%d) x2 = 1'b%d%c\n", i+initial_offset2, random, 59);
+		fprintf(fp, "#(clk_periode*%d) y1 = 1'b%d%c\n", i+initial_offset3, random, 59);
+		fprintf(fp, "#(clk_periode*%d) y2 = 1'b%d%c\n", i+initial_offset4, random, 59);
 
 	}
 

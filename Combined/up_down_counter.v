@@ -18,7 +18,7 @@ module up_down_counter
 
 	//-------------Code Starts Here-------
 	always @(posedge clk) begin
-		if (!reset) begin // active low reset
+		if (reset) begin // active low reset
 		  out <= {WIDTH{1'b0}};
 		end
 		else if (up & !(down)) begin

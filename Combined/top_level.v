@@ -23,8 +23,8 @@ module top_level
 		.clk	(clk),
 		.rst	(rst_cda),
 		.en		(en),
-		.x1		(x2),
-		.x2		(x1),
+		.x1		(x1),
+		.x2		(x2),
 		.out	(code_12)
 	);
 	
@@ -33,8 +33,8 @@ module top_level
 		.clk	(clk),
 		.rst	(rst_cda),
 		.en		(en),
-		.x1		(x1),
-		.x2		(x2),
+		.x1		(x2),
+		.x2		(x1),
 		.out	(code_21)
 	);
 	
@@ -43,8 +43,8 @@ module top_level
 		.clk	(clk),
 		.rst	(rst_cda),
 		.en		(en),
-		.x1		(y2),
-		.x2		(y1),
+		.x1		(y1),
+		.x2		(y2),
 		.out	(code_34)
 	);
 	
@@ -53,8 +53,8 @@ module top_level
 		.clk	(clk),
 		.rst	(rst_cda),
 		.en		(en),
-		.x1		(y1),
-		.x2		(y2),
+		.x1		(y2),
+		.x2		(y1),
 		.out	(code_43)
 	);
 	

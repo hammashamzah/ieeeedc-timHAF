@@ -17,7 +17,7 @@ module shift_register
 	reg[WIDTH-1:0] data;
 
 	always @(posedge clk) begin
-		if (!rst) begin
+		if (rst) begin
 			data <= {WIDTH{1'b0}};
 		end
 		else if (en) begin

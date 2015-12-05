@@ -7,7 +7,7 @@ module encoder
 );
 	output [6:0] binary_out  ;
 	input  en ; 
-	input [86:0] encoder_in ;
+	input [WIDTH - 2:0] encoder_in ;
 	
 	assign binary_out  = (!en) ? 7'd127 : (
 						(encoder_in[0 ]) ? 7'd1  : 
@@ -95,7 +95,6 @@ module encoder
 						(encoder_in[82]) ? 7'd83 : 
 						(encoder_in[83]) ? 7'd84 : 
 						(encoder_in[84]) ? 7'd85 : 
-						(encoder_in[85]) ? 7'd86 : 
-						(encoder_in[86]) ? 7'd87 : 7'd127);
+						(encoder_in[85]) ? 7'd86 : 7'd127);
 	
 endmodule

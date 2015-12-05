@@ -6,10 +6,10 @@ module LUT_toplevel(clock,code_x1,code_x2,code_y1,code_y2,theta);
                 code_y2;
     output [8:0]theta;
     
-    // x1: x1 telat terhadap x2
-    // x2: x2 telat terhadap x1
-    // y1: y1 telat terhadap y2
-    // y2: y2 telat terhadap y1
+    // code_x1: x1 telat terhadap x2, lebih dekat ke x2
+    // code_x2: x2 telat terhadap x1, lebih dekat ke x1
+    // code_y1: y1 telat terhadap y2, lebih dekat ke y2
+    // code_y2: y2 telat terhadap y1, lebih dekat ke y1
     //
     //     y1
     //
@@ -93,38 +93,53 @@ module LUT_toplevel(clock,code_x1,code_x2,code_y1,code_y2,theta);
     always @(inrange_x1 or inrange_x2 or inrange_y1 or inrange_y2
           or thetaout_x1 or thetaout_x2 or thetaout_y1 or thetaout_y2
 			 or temp_x1 or temp_x2 or temp_y1 or temp_y2
-			 or temp_x12 or temp_x22 or temp_y12 or temp_y22)
+			 or temp_x12 or temp_x22 or temp_y12 or temp_y22 or code_x1 or code_x2 or code_y1 or code_y2)
     begin
         if(inrange_x1)
         begin
             if(thetaout_y2 > 7'd0)
-                theta = temp_x1;
+                theta = temp_x1 + 9'd1;
             else
-                theta = temp_x12;
+                theta = temp_x12 + 9'd1;
         end
         else if(inrange_x2)
         begin
             if(thetaout_y2 > 7'd0)
-                theta = temp_x2;
+                theta = temp_x2 + 9'd1;
             else
-                theta = temp_x22;
+                theta = temp_x22  + 9'd1;
         end
         else if(inrange_y1)
         begin
             if(thetaout_x1 > 7'd0)
-                theta = temp_y1;
+                theta = temp_y1  + 9'd1;
             else
-                theta = temp_y12;
+                theta = temp_y12  + 9'd1;
         end
         else if(inrange_y2)
         begin
             if(thetaout_x1 > 7'd0)
-                theta = temp_y2;
+                theta = temp_y2  + 9'd1;
             else
-                theta = temp_y22;
+                theta = temp_y22  + 9'd1;
         end
-        else
-            theta = 9'h1FF;
+        else if(code_x2 == 7'b1111111 && code_y1 == 7'b1111111 && code_y2 == 7'b1111111)
+        begin
+            theta = 9'd0;
+        end
+        else if(code_y1 == 7'b1111111 && code_x1 == 7'b1111111 && code_x2 == 7'b1111111)
+        begin
+            theta = 9'd90;
+        end
+        else if(code_x1 == 7'b1111111 && code_y1 == 7'b1111111 && code_y2 == 7'b1111111)
+        begin
+          theta = 9'd180;
+        end
+        else if(code_y2 == 7'b1111111 && code_x1 == 7'b1111111 && code_x2 == 7'b1111111)
+        begin
+          theta = 9'd270;
+        end
+            
     end
     
 endmodule 
