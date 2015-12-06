@@ -93,8 +93,7 @@ module LUT_toplevel(clock,code_x1,code_x2,code_y1,code_y2,theta);
     always @(inrange_x1 or inrange_x2 or inrange_y1 or inrange_y2
           or thetaout_x1 or thetaout_x2 or thetaout_y1 or thetaout_y2
 			 or temp_x1 or temp_x2 or temp_y1 or temp_y2
-			 or temp_x12 or temp_x22 or temp_y12 or temp_y22
-			 or code_x1 or code_x2 or code_y1 or code_y2)
+			 or temp_x12 or temp_x22 or temp_y12 or temp_y22 or code_x1 or code_x2 or code_y1 or code_y2)
     begin
         if(inrange_x1)
         begin
@@ -140,8 +139,6 @@ module LUT_toplevel(clock,code_x1,code_x2,code_y1,code_y2,theta);
         begin
           theta = 9'd270;
         end
-		else
-			theta = 9'b111111111;
             
     end
     

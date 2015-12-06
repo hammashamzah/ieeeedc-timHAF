@@ -1,0 +1,11 @@
+module bcd
+(
+	input	[8:0]number,
+	output	[3:0]bcd0,
+	output	[3:0]bcd1,
+	output	[3:0]bcd2
+);
+
+
+
+endmodule 

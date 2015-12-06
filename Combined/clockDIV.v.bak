@@ -1,0 +1,6 @@
+module clockDIV
+(
+	input		enable,
+	input		clock,
+	output reg	newClock
+);
