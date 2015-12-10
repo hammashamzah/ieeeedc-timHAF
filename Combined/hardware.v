@@ -9,7 +9,11 @@ module hardware
 	input		[7:0]y2,
 	output reg	[6:0]segment0,
 	output reg	[6:0]segment1,
-	output reg	[6:0]segment2
+	output reg	[6:0]segment2,
+	output		msb_x1,
+	output		msb_x2,
+	output		msb_y1,
+	output		msb_y2
 );
 
 	wire	clock;
@@ -102,5 +106,11 @@ module hardware
 			segment2 <= seg2;
 		end
 	end
+	
+	/** LED Output for Debugging **/
+	assign	msb_x1 = x1[7],
+			msb_x2 = x2[7],
+			msb_y1 = y1[7],
+			msb_y2 = y2[7];
 	
 endmodule 

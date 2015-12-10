@@ -10,11 +10,11 @@ module clockDIV
 	output reg	newClock
 );
 
-	// Divide 24 MHz clock to 200 kHz = 120 : 1
-	// Each state will change every 120/2 = 60 clock cycles
-	// 59 = 6'b11 1011
+	// Divide 50 MHz clock to 200 kHz = 250 : 1
+	// Each state will change every 250/2 = 125 clock cycles
+	// 124 = 7'b‭111 1100‬
 
-	reg	[5:0]counter;
+	reg	[6:0]counter;
 	reg	[1:0]	state,
 				nextState;
 	
@@ -27,8 +27,8 @@ module clockDIV
 		begin
 			case(state)
 				`OFF :		nextState <= `HIGH;
-				`HIGH:		nextState <= (counter >= 6'd59)? `LOW  : state;
-				`LOW :		nextState <= (counter >= 6'd59)? `HIGH : state;
+				`HIGH:		nextState <= (counter >= 7'd124)? `LOW  : state;
+				`LOW :		nextState <= (counter >= 7'd124)? `HIGH : state;
 				default:	nextState <= `OFF;
 			endcase
 		end
@@ -45,10 +45,10 @@ module clockDIV
 	always @(posedge clock)
 	begin
 		if(reset || (nextState != state))
-			counter <= 6'd0;
+			counter <= 7'd0;
 		else if(enable)
 		begin
-			counter <= counter + 6'd1;
+			counter <= counter + 7'd1;
 		end
 	end
 	

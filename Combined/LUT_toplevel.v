@@ -123,23 +123,23 @@ module LUT_toplevel(clock,code_x1,code_x2,code_y1,code_y2,theta);
                 theta = temp_y2  + 9'd1;
             else
                 theta = temp_y22  + 9'd1;
-        end
-        else if(code_x2 == 7'b1111111 && code_y1 == 7'b1111111 && code_y2 == 7'b1111111)
+        end /*
+        else if(code_x1 != 7'b1111111 && code_x2 == 7'b1111111 && code_y1 == 7'b1111111 && code_y2 == 7'b1111111)
         begin
             theta = 9'd0;
         end
-        else if(code_y1 == 7'b1111111 && code_x1 == 7'b1111111 && code_x2 == 7'b1111111)
+        else if(code_y1 == 7'b1111111 && code_y2 != 7'b1111111 && code_x1 == 7'b1111111 && code_x2 == 7'b1111111)
         begin
             theta = 9'd90;
         end
-        else if(code_x1 == 7'b1111111 && code_y1 == 7'b1111111 && code_y2 == 7'b1111111)
+        else if(code_x1 == 7'b1111111 && code_x2 != 7'b1111111 && code_y1 == 7'b1111111 && code_y2 == 7'b1111111)
         begin
           theta = 9'd180;
         end
-        else if(code_y2 == 7'b1111111 && code_x1 == 7'b1111111 && code_x2 == 7'b1111111)
+        else if(code_y1 != 7'b1111111 && code_y2 == 7'b1111111 && code_x1 == 7'b1111111 && code_x2 == 7'b1111111)
         begin
           theta = 9'd270;
-        end
+        end */
 		else
 			theta = 9'b111111111;
             
