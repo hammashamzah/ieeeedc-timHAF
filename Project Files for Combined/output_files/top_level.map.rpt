@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Sun Dec 06 17:52:46 2015
+Mon Dec 07 19:57:53 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -765,7 +765,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec 06 17:52:46 2015           ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 07 19:57:52 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top_level                                       ;
 ; Top-level Entity Name              ; hardware                                        ;
@@ -873,46 +873,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                             ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
-; ../Combined/up_down_counter.v    ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/up_down_counter.v                            ;         ;
-; ../Combined/top_level.v          ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/top_level.v                                  ;         ;
-; ../Combined/shift_register.v     ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/shift_register.v                             ;         ;
-; ../Combined/quantizer.v          ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/quantizer.v                                  ;         ;
-; ../Combined/LUT_toplevel.v       ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/LUT_toplevel.v                               ;         ;
-; ../Combined/LUT.v                ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/LUT.v                                        ;         ;
-; ../Combined/hardware.v           ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/hardware.v                                   ;         ;
-; ../Combined/encoder.v            ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/encoder.v                                    ;         ;
-; ../Combined/clockDIV.v           ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/clockDIV.v                                   ;         ;
-; ../Combined/cda_top_level.v      ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/cda_top_level.v                              ;         ;
-; ../Combined/ccd.v                ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/ccd.v                                        ;         ;
-; ../Combined/bcdto7seg.v          ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/bcdto7seg.v                                  ;         ;
-; ../Combined/bcd.v                ; yes             ; User Verilog HDL File        ; D:/Documents/GitHub/ieeeedc-timHAF/Combined/bcd.v                                        ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                         ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                        ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                    ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                         ;         ;
-; db/lpm_divide_55m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_55m.tdf      ;         ;
-; db/sign_div_unsign_ckh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/sign_div_unsign_ckh.tdf ;         ;
-; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/alt_u_div_qve.tdf       ;         ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/add_sub_lkc.tdf         ;         ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/add_sub_mkc.tdf         ;         ;
-; db/lpm_divide_85m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_85m.tdf      ;         ;
-; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/sign_div_unsign_fkh.tdf ;         ;
-; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/alt_u_div_00f.tdf       ;         ;
-; db/lpm_divide_0dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_0dm.tdf      ;         ;
-; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/sign_div_unsign_akh.tdf ;         ;
-; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/alt_u_div_mve.tdf       ;         ;
-; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/GitHub/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_5dm.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; ../Combined/up_down_counter.v    ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/up_down_counter.v                            ;         ;
+; ../Combined/top_level.v          ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/top_level.v                                  ;         ;
+; ../Combined/shift_register.v     ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/shift_register.v                             ;         ;
+; ../Combined/quantizer.v          ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/quantizer.v                                  ;         ;
+; ../Combined/LUT_toplevel.v       ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/LUT_toplevel.v                               ;         ;
+; ../Combined/LUT.v                ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/LUT.v                                        ;         ;
+; ../Combined/hardware.v           ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/hardware.v                                   ;         ;
+; ../Combined/encoder.v            ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/encoder.v                                    ;         ;
+; ../Combined/clockDIV.v           ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/clockDIV.v                                   ;         ;
+; ../Combined/cda_top_level.v      ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/cda_top_level.v                              ;         ;
+; ../Combined/ccd.v                ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/ccd.v                                        ;         ;
+; ../Combined/bcdto7seg.v          ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/bcdto7seg.v                                  ;         ;
+; ../Combined/bcd.v                ; yes             ; User Verilog HDL File        ; D:/Documents/ieeeedc-timHAF/Combined/bcd.v                                        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                  ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                 ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc             ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                  ;         ;
+; db/lpm_divide_55m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_55m.tdf      ;         ;
+; db/sign_div_unsign_ckh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/sign_div_unsign_ckh.tdf ;         ;
+; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/alt_u_div_qve.tdf       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/add_sub_lkc.tdf         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/add_sub_mkc.tdf         ;         ;
+; db/lpm_divide_85m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_85m.tdf      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/sign_div_unsign_fkh.tdf ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/alt_u_div_00f.tdf       ;         ;
+; db/lpm_divide_0dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_0dm.tdf      ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/sign_div_unsign_akh.tdf ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/alt_u_div_mve.tdf       ;         ;
+; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Documents/ieeeedc-timHAF/Project Files for Combined/db/lpm_divide_5dm.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------+
@@ -9365,7 +9365,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:22     ;
+; Top            ; 00:01:25     ;
 +----------------+--------------+
 
 
@@ -9375,34 +9375,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Dec 06 17:52:19 2015
+    Info: Processing started: Mon Dec 07 19:55:57 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level -c top_level
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/up_down_counter.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/up_down_counter.v
     Info (12023): Found entity 1: up_down_counter
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/top_level.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/top_level.v
     Info (12023): Found entity 1: top_level
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/shift_register.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/shift_register.v
     Info (12023): Found entity 1: shift_register
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/quantizer.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/quantizer.v
     Info (12023): Found entity 1: quantizer
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/lut_toplevel.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/lut_toplevel.v
     Info (12023): Found entity 1: LUT_toplevel
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/lut.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/lut.v
     Info (12023): Found entity 1: LUT
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/hardware.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/hardware.v
     Info (12023): Found entity 1: hardware
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/encoder.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/encoder.v
     Info (12023): Found entity 1: encoder
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/clockdiv.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/clockdiv.v
     Info (12023): Found entity 1: clockDIV
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/cda_top_level.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/cda_top_level.v
     Info (12023): Found entity 1: cda_top_level
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/ccd.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/ccd.v
     Info (12023): Found entity 1: ccd
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/bcdto7seg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/bcdto7seg.v
     Info (12023): Found entity 1: bcdto7seg
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/github/ieeeedc-timhaf/combined/bcd.v
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ieeeedc-timhaf/combined/bcd.v
     Info (12023): Found entity 1: bcd
 Info (12127): Elaborating entity "hardware" for the top level hierarchy
 Info (12128): Elaborating entity "clockDIV" for hierarchy "clockDIV:newClock"
@@ -9508,9 +9508,9 @@ Info (21057): Implemented 9320 device resources after synthesis - the final reso
     Info (21059): Implemented 21 output pins
     Info (21061): Implemented 9264 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 537 megabytes
-    Info: Processing ended: Sun Dec 06 17:52:47 2015
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 556 megabytes
+    Info: Processing ended: Mon Dec 07 19:57:53 2015
+    Info: Elapsed time: 00:01:56
+    Info: Total CPU time (on all processors): 00:01:15
 
 
