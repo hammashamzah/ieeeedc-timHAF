@@ -1,3 +1,5 @@
+#include <avr/io.h>
+#include <avr/interrupt.h>
 #include <SD.h>
 
 #define CS 10
@@ -61,16 +63,20 @@ void setup()
     }
     //dataFile.close();
 
-    /** Timer 0 Configuration **/
-    // WGM0 = 0b010: CTC mode
-    // CS0 = 0b001: Running with no prescaling
-    // OCR0A = 16MHz/200kHz - 1 = 80-1 = 79
-    TCNT0 = 0;
-    OCR0A = 79;
-    TIFR0 |= (1<<OCF0A);
-    TIMSK0 |= (1<<OCIE0A);
-    TCCR0A = 0b10<<WGM00;
-    TCCR0B = (0<<WGM02) | (0b001<<CS00);
+    /** Timer 2 Configuration **/
+    // WGM2 = 0b010: CTC mode
+    // CS2 = 0b001: Running with no prescaling
+    // OCR2A = 16MHz/200kHz - 1 = 80-1 = 79
+    cli();
+    TCCR2A = 0;
+    TCCR2B = 0;
+    TCNT2 = 0;
+    OCR2A = 79;
+    TIFR2 |= (1<<OCF2A);
+    TIMSK2 |= (1<<OCIE2A);
+    TCCR2A = 0b10<<WGM20;
+    TCCR2B = (0<<WGM22) | (0b001<<CS20);
+    sei();
   }
   // if the file isn't open, pop up an error:
   else {
@@ -89,14 +95,16 @@ void setup()
   /** Timer 1: One-second timer **/
   // WGM1 = 0b0100: CTC mode
   // CS1 = 0b101: Prescaler 1024
+  cli();
+  TCCR1A = 0;
+  TCCR1B = 0;
   TCNT1 = 0;
   OCR1A = 15624;
   TIFR1 |= (1<<OCF1A);
   TIMSK1 |= (1<<OCIE1A);
   TCCR1A = 0b00<<WGM10;
   TCCR1B = 0b01<<WGM12 | 0b101<<CS10;
-
-  interrupts();
+  sei();
 }
 
 volatile uint8_t kHz200 = 0, Hz1 = 0;
@@ -108,7 +116,7 @@ ISR(TIMER0_COMPA_vect)
 ISR(TIMER1_COMPA_vect)
 {
   Hz1 = 1;
-  digitalWrite(LED, digitalRead(LED) ^ 1); // toggle LED pin
+  digitalWrite(LED, !digitalRead(LED)); // toggle LED pin
 }
 
 void loop() {
