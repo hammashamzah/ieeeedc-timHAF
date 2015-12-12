@@ -23,8 +23,8 @@ void setup()
   pinMode(x2,OUTPUT);
   pinMode(y1,OUTPUT);
   pinMode(y2,OUTPUT);
-  pinMode(LED,OUTPUT);
-  digitalWrite(LED,1);
+  //pinMode(LED,OUTPUT);
+  //digitalWrite(LED,1);
   
   // Open serial communications and wait for port to open
   Serial.begin(1000000);
@@ -49,6 +49,7 @@ void setup()
   if(dataFile)
   {
     uint8_t i = 0;
+    Serial.println("File opened.");
     while(dataFile.available() && i<100)
     {
       uint8_t data = dataFile.read();
@@ -67,7 +68,8 @@ void setup()
     // WGM2 = 0b010: CTC mode
     // CS2 = 0b001: Running with no prescaling
     // OCR2A = 16MHz/200kHz - 1 = 80-1 = 79
-    cli();
+    
+    //cli();
     TCCR2A = 0;
     TCCR2B = 0;
     TCNT2 = 0;
@@ -76,7 +78,19 @@ void setup()
     TIMSK2 |= (1<<OCIE2A);
     TCCR2A = 0b10<<WGM20;
     TCCR2B = (0<<WGM22) | (0b001<<CS20);
-    sei();
+    //sei(); 
+
+    /** Timer 1 Configuration **/
+    // WGM1 = 0b0100: CTC mode with OCR1A as TOP value
+    // CS1 = 0b001: Running with no prescaling
+    // OCR1A = 16MHz/200kHz - 1 = 80-1 = 79
+/*    TCCR1A = 0;
+    TCCR1B = 0;
+    TCNT1 = 0;
+    OCR1A = 79;
+    TIMSK1 |= (1<<OCIE1A);
+    TCCR1A = (0b00<<WGM10);
+    TCCR1B = (0b01<<WGM12) | (0b001<<CS10); */
   }
   // if the file isn't open, pop up an error:
   else {
@@ -103,12 +117,12 @@ void setup()
   TIFR1 |= (1<<OCF1A);
   TIMSK1 |= (1<<OCIE1A);
   TCCR1A = 0b00<<WGM10;
-  TCCR1B = 0b01<<WGM12 | 0b101<<CS10;
+  TCCR1B = 0b01<<WGM12 | 0b101<<CS10; 
   sei();
 }
 
 volatile uint8_t kHz200 = 0, Hz1 = 0;
-ISR(TIMER0_COMPA_vect)
+ISR(TIMER2_COMPA_vect)
 {
   kHz200 = 1;
 }
@@ -116,7 +130,7 @@ ISR(TIMER0_COMPA_vect)
 ISR(TIMER1_COMPA_vect)
 {
   Hz1 = 1;
-  digitalWrite(LED, !digitalRead(LED)); // toggle LED pin
+  //digitalWrite(LED, !digitalRead(LED)); // toggle LED pin
 }
 
 void loop() {
@@ -176,7 +190,7 @@ void loop() {
 
   if(Hz1)
   {
-    //Serial.println(count);
+    Serial.println(count);
     Hz1 = 0;
     count = 0;
   }
