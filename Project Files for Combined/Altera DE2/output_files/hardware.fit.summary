@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Dec 09 13:56:41 2015
+Fitter Status : Successful - Tue Dec 15 12:12:15 2015
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : hardware
 Top-level Entity Name : hardware
 Family : Cyclone II
-Device : EP2C35F672C6
+Device : EP2C70F896C6
 Timing Models : Final
-Total logic elements : 9,192 / 33,216 ( 28 % )
-    Total combinational functions : 9,174 / 33,216 ( 28 % )
-    Dedicated logic registers : 7,085 / 33,216 ( 21 % )
+Total logic elements : 9,190 / 68,416 ( 13 % )
+    Total combinational functions : 9,182 / 68,416 ( 13 % )
+    Dedicated logic registers : 7,085 / 68,416 ( 10 % )
 Total registers : 7085
-Total pins : 60 / 475 ( 13 % )
+Total pins : 60 / 622 ( 10 % )
 Total virtual pins : 0
-Total memory bits : 0 / 483,840 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total memory bits : 0 / 1,152,000 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 300 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
